@@ -80,15 +80,41 @@ App = {
         return adoptionInstance.getAdopters.call();
       })
       .then(function(adopters) {
-        for (i = 0; i < adopters.length; i++) {
-          if (adopters[i] !== "0x0000000000000000000000000000000000000000") {
-            $(".panel-pet")
-              .eq(i)
-              .find("button")
-              .text("Success")
-              .attr("disabled", true);
+        web3.eth.getAccounts(function(error, accounts) {
+          if (error) {
+            console.log(error);
           }
-        }
+
+          for (i = 0; i < adopters.length; i++) {
+            if (adopters[i] !== "0x0000000000000000000000000000000000000000") {
+              if (adopters[i] === accounts[0]) {
+                $(".panel-pet")
+                  .eq(i)
+                  .find("button")
+                  .text("Owned")
+                  .attr("disabled", true);
+
+                $(".panel-pet")
+                  .eq(i)
+                  .css("background-color", "#FAFAD2");
+
+                $(".panel-heading")
+                  .eq(i)
+                  .css("background-color", "rgb(240, 240, 170)");
+              } else {
+                $(".panel-pet")
+                  .eq(i)
+                  .find("button")
+                  .text("Not available")
+                  .attr("disabled", true);
+
+                $(".panel-pet")
+                  .eq(i)
+                  .css("opacity", "0.6");
+              }
+            }
+          }
+        });
       })
       .catch(function(err) {
         console.log(err.message);
