@@ -1,18 +1,18 @@
 {
-  "name": "stock_photo_market",
+  "name": "pet-shop",
   "version": "1.0.0",
-  "description": "Purchase stock photos on this amazing website!",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "author": "Antanas Valenčius",
-  "license": "ISC",
+  "description": "",
+  "main": "truffle.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "web3": "^1.2.4"
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
   }
 }
