@@ -1238,12 +1238,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x1ee03E89015d19241FAA0cCE4C7DA4bcac41D0DB",
-      "transactionHash": "0xc6c050c681850694b87e565a9792e694ee983e3978097c8d74c59ac86509981a"
+      "address": "0x2E27E0D95e4629458873458E8118807031e8Cddf",
+      "transactionHash": "0xafc5a2fec3030afe946c5d6a3f53d37493eaa87ec3e28a5d36ae18f3a4b7de55"
     }
   },
   "schemaVersion": "3.0.19",
-  "updatedAt": "2020-01-14T17:21:30.922Z",
+  "updatedAt": "2020-01-14T18:06:07.618Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
