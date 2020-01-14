@@ -1,5 +1,5 @@
-const PurchaseStockImage = artifacts.require("PurchaseStockImage");
+var Adoption = artifacts.require("Adoption");
 
-module.exports = function(deployer, network, accounts) {
-  deployer.deploy(PurchaseStockImage, accounts[1]);
+module.exports = function(deployer) {
+  deployer.deploy(Adoption);
 };
